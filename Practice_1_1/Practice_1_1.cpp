@@ -8,3 +8,22 @@ static void RenderSceneCB()
 	glutSwapBuffers();
 }
 
+static void glutInitial(int argc, char**argv)
+{
+	glutInit(&argc,argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+
+	glutInitWindowSize(800,1024);
+	glutInitWindowPosition(100,100);
+}
+
+int main(int argc, char**argv)
+{
+	glutInitial(argc,argv);
+
+	glutCreateWindow("Tutorial 1");
+	glutDisplayFunc(RenderSceneCB);
+
+	glClearColor(0.0f,0.0f,0.0f,0.0f);
+	glutMainLoop();
+}
