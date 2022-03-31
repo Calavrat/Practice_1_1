@@ -8,4 +8,3 @@ static void RenderSceneCB()
 	glutSwapBuffers();
 }
 
-
